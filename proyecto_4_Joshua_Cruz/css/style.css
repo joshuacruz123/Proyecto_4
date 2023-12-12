@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(0, 24, 6);
+}
+
+.reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/imagen.png);
+    background-size: cover;
+    border: 1em solid rgb(72, 222, 249);
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 20px 5px rgb(72, 199, 249);
+}
+
+.reloj::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 162, 255);
+    border-radius: 50vh;
+    z-index: 100;
+
+}
+
+.hora{
+    width: 140px;
+    height: 140px;
+}
+
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: rgb(170, 255, 0);
+    z-index: 20;
+    border-radius: 50vh;
+}
+
+.minuto{
+    width: 220px;
+    height: 220px;
+}
+
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background: rgb(56, 246, 75);
+    z-index: 21;
+    border-radius: 50vh;
+}
+
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background: rgb(1, 195, 46);
+    z-index: 22;
+    border-radius: 50vh;
+}
+
+.hora, .minuto, .segundo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+
+.digital {
+    border: 0.5rem solid rgb(72, 222, 249);
+    width: 150px;
+    height: 50px;
+    z-index: 10; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(48, 248, 48);
+    background-color: black;
+    box-shadow: 0px 0px 20px 5px rgb(72, 199, 249);
+    position: absolute; 
+    top: 350px; 
+    left: 90vh; 
+}
